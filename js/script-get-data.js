@@ -90,19 +90,23 @@ $(document).ready(function () {
       tbody.innerHTML = "";
 
       console.log(rows);
-      for (let i = 0; i < rows.length; i++) {
+      for (let rowNum = 0; rowNum < rows.length; rowNum++) {
         if (parameter) {
-          if (rows[i][colToLook] === parameter) {
-            if (rows[i][0] !== "Task ID") {
-              console.log(rows[i][0]);
-              let trow = createTableRow(rows[i].length, rows[i]);
+          if (rows[rowNum][colToLook] === parameter) {
+            if (rows[rowNum][0] !== "Task ID") {
+              console.log(rows[rowNum][0]);
+              let trow = createTableRow(
+                rows[rowNum].length,
+                rows[rowNum],
+                rows[rowNum][0]
+              );
               tbody.append(trow);
             }
           }
         } else {
           // we are using the createTableRow function to create the rows with the relevant data
-          if (rows[i][0] !== "Task ID") {
-            let trow = createTableRow(rows[i].length, rows[i]);
+          if (rows[rowNum][0] !== "Task ID") {
+            let trow = createTableRow(rows[rowNum].length, rows[rowNum]);
             tbody.appendChild(trow);
           }
         }
@@ -111,14 +115,38 @@ $(document).ready(function () {
   };
 
   // This function will create a row with the <td> tags
-  const createTableRow = (num, cell) => {
+  const createTableRow = (num, cell, idNum) => {
     let tr = document.createElement("tr");
 
-    for (let cellNum = 0; cellNum <= num - 1; cellNum++) {
+    for (let cellNum = 0; cellNum < num - 1; cellNum++) {
       let td = document.createElement("td");
       td.innerHTML = `<td scope="col">${cell[cellNum]}</td>`;
       tr.append(td);
     }
+
+    let imgCell = document.createElement("td");
+    imgCell = addImg("cleaning", idNum);
+    console.log(`This is the image id: ${idNum}`);
+    tr.append(imgCell);
     return tr;
+  };
+
+  // this function will add the correct image to the required row
+  const addImg = (imgName, taskID) => {
+    let td = document.createElement("td");
+    td.innerHTML = `
+      <img
+        class="img-fluid rounded mx-auto d-block"
+        src="img/cleaning-thumb.png"
+        alt="Image if cleaning equipment"
+        id="img-1"
+      />`;
+
+    td.classList.add("img-container", "cleaning-img");
+    td.id = `${imgName}-${taskID}`;
+    td.setAttribute("data-bs-toggle", "modal");
+    // td.setAttribute("data-bs-toggle", "#exampleModal");
+
+    return td;
   };
 });
