@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cleaning schedule</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark mb-5 top-navbar">
+      
+        <figure class="logo-container">
+          <img src="img/cleaning..png" alt="logo" class="ing-fluid img-logo" />
+        </figure>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ms-5" id="navbarNav">
+          <ul class="navbar-nav d-flex justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Burger King</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Popeyes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tim Hortons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Firehouse subs</a>
+            </li>
+          </ul>
+    </nav>
+
+    
+    <nav class="aside-nav">
+      <h3 class="h3 mb-3 h3-aside-heading">Schedule</h3>
+      <a class="nav-link active" aria-current="page" href="#" id="all-tasks">All tasks</a>
+      <a class="nav-link " aria-current="page" href="#" id="daily">Daily</a>
+      <a class="nav-link" href="#" id="weekly">Weekly</a>
+      <a class="nav-link" href="#" id="periodic">Periodic</a>
+      <a class="nav-link" href="#" id="external_area">External area</a>
+      <a class="nav-link" href="#" id="guest_area_dining">Guest area - dining room</a>
+      <a class="nav-link" href="#" id="guest_area_restrooms">Guest area - restrooms</a>
+      <a class="nav-link" href="#" id="boh_building">BOH - building</a>
+      <a class="nav-link" href="#" id="boh_equipment">BOH - equipment</a>
+
+    </nav>
+
+    <!-- Start of the container -->
+    <main class="container">
+      <h1 class="h1 text-center mt-3 mb-5">Cleaning schedule</h1>
+
+      <!-- Select file field -->
+    <div class="input-wrapper">
+        <i class="fa-regular fa-folder-open icon"></i>
+        <input type="file" name="file" class="input-field" id="input_file" accept=".xls, .xlsx, .csv">
+        
+    </div>
+
+      <table class="table table-striped table-cleaning " id="cleaning-list">
+        <thead class="table-head">
+          <tr class="table-head-row">
+            <th scope="col">Task ID</th>
+            <th scope="col">Area</th>
+            <th scope="col">Task name</th>
+            <th scope="col">Frequency</th>
+            <th scope="col">When to complete</th>
+            <th scope="col">Cleaning card</th>
+            <th scope="col">Link</th>
+            <th scope="col">Task description</th>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody id="table-body" >
+          <tr>
+            <th scope="row">1</th>
+            <td>External</td>
+            <td>Paved Exterior areas</td>
+            <td>Daily</td>
+            <td>Pre-open</td>
+            <td>Yes</td>
+            <td>example1</td>
+            <td>This will be detailed explanation what should be cleaned</td>
+
+            <td
+              class="img-container cleaning-img"
+              id="1"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <img
+                class="img-fluid rounded mx-auto d-block"
+                src="img/cleaning-thumb.png"
+                alt="Image if cleaning equipment"
+                id="img-1"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>External</td>
+            <td>Landscaping and Furniture</td>
+            <td>Daily</td>
+            <td>Pre-open</td>
+            <td>Yes</td>
+            <td>example2</td>
+            <td>This will be detailed explanation what should be cleaned</td>
+            <td
+              class="img-container cleaning-img"
+              id="2"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <img
+                class="img-fluid rounded mx-auto d-block"
+                src="img/cleaning-thumb.png"
+                alt="Image if cleaning equipment"
+                id="img-2"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>External</td>
+            <td>Trash Receptacles</td>
+            <td>Daily</td>
+            <td>Pre-open</td>
+            <td>Yes</td>
+            <td>example3</td>
+            <td>This will be detailed explanation what should be cleaned</td>
+            <td
+              class="img-container cleaning-img"
+              id="3"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <img
+                class="img-fluid rounded mx-auto d-block"
+                src="img/cleaning-thumb.png"
+                alt="Image if cleaning equipment"
+                id="img-3"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal" tabindex="-1" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Details of the cleaning taks</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <figure class="modal-img-container">
+              <img src="img/img-1.png" class="img-fluid modal-img" />
+            </figure>
+            <h3>This is the cleaning task name</h3>
+            <p>This are step-by-step explanation how to clean it</p>
+            <ul>
+              <li>This is step 1</li>
+              <li>This is step 2</li>
+              <li>This is step 3</li>
+              <li>This is step 4</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-modal"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF MODAL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+     <script src="js/xlsx.full.js"></script>
+     <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+     <script src="js/xl.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script-get-data.js"></script>
+  </body>
+</html>

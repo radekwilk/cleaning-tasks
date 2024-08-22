@@ -1,0 +1,136 @@
+.img-container {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.top-navbar {
+  background-color: #8965fb;
+  -webkit-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
+  box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
+}
+
+.logo-container {
+  width: 2.5rem;
+}
+
+.img-logo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.aside-nav {
+  position: fixed;
+  top: 6.5rem;
+  left: 8.5rem;
+  width: 15rem;
+  height: 90vh;
+  background-color: #705abb;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 3rem;
+  border-top-right-radius: 3rem;
+  -webkit-box-shadow: 17px 5px 23px -6px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 17px 5px 23px -6px rgba(0, 0, 0, 0.48);
+  box-shadow: 17px 5px 23px -6px rgba(0, 0, 0, 0.48);
+}
+
+.aside-nav .nav-link {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.h3-aside-heading {
+  color: white;
+}
+
+.table-cleaning {
+  border-radius: 0.5rem;
+  width: 70vw;
+  -webkit-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
+  box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
+  background-color: #c2b3f2;
+  border: none;
+}
+
+.table-head {
+  background-color: rgb(112, 90, 187);
+  color: white;
+}
+
+.table-head-row th {
+  vertical-align: middle;
+}
+
+/* Styling of input type="file"  */
+/* INPUT WRAPPER AND INPUT FILE STYLING */
+.input-wrapper {
+  width: 60%;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  align-items: center;
+  font-size: 2rem;
+  border: 2px solid rgba(112, 90, 187, 0.6);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  -webkit-box-shadow: 6px 7px 20px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 20px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 7px 20px -4px rgba(0, 0, 0, 0.75);
+}
+
+.input-field::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.input-field::before {
+  content: "Select excel file";
+  height: 3.2rem;
+  display: inline-block;
+  background-color: rgba(112, 90, 187, 0.9);
+  color: #fff;
+  border: 1px solid rgb(214, 209, 233);
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.input-field:hover::before {
+  border-color: black;
+}
+.input-field:active::before {
+  background: -webkit-linear-gradient(
+    top,
+    rgb(205, 196, 239),
+    rgb(205, 196, 233)
+  );
+}
+
+.input-field {
+  width: 90%;
+  font-size: 2.2rem;
+}
+
+.icon {
+  font-size: 2.8rem;
+  color: rgba(112, 90, 187, 0.9);
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+
+.stripe-bg:nth-child(even) {
+  background-color: red;
+}
+
+.modal-header,
+.btn-modal {
+  background-color: #8965fb;
+  color: white;
+}
