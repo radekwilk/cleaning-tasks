@@ -50,7 +50,7 @@
 .table-cleaning {
   border-radius: 0.5rem;
   width: 70vw;
-  margin: 0 auto 0 25rem;
+  margin: 0 auto 10rem 25rem;
   -webkit-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
   -moz-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
   box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
