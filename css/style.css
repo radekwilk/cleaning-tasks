@@ -134,3 +134,9 @@
   background-color: #8965fb;
   color: white;
 }
+
+@media only screen and (max-width: 1000px) {
+  .table-cleaning {
+    width: 55vw;
+  }
+}
