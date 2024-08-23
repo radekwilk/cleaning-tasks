@@ -61,7 +61,7 @@
   box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
   background-color: #c2b3f2;
   border: none;
-  display: none;
+  /* display: none; */
   transition: display 0.4s linear;
 }
 
@@ -74,9 +74,10 @@
   vertical-align: middle;
 }
 
-#table-body tr:hover {
-  color: #bfacfe;
+#table-body tr {
+  /* color: #bfacfe; */
   transition: background-color 0.4s linear;
+  width: 100%;
 }
 
 #table-body tr:hover {

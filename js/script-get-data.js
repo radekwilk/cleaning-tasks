@@ -43,7 +43,7 @@ $(document).ready(function () {
     });
 
     if (file) {
-      table.style.display = "block";
+      // table.style.display = "block";
       fileDownloaded = true;
     } else {
       fileDownloaded = false;
