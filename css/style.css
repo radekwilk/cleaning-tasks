@@ -102,6 +102,29 @@
   -webkit-box-shadow: 6px 7px 20px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 7px 20px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 7px 20px -4px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.input-wrapper::before {
+  content: "Select the excel file containing the cleaning tasks";
+  display: none;
+  position: absolute;
+  top: -4rem;
+  left: 10rem;
+  width: 43rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: #bfacfe;
+  color: #705abb;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0.8;
+  transition: display 0.4s ease-in-out;
+}
+
+.input-wrapper:hover.input-wrapper::before {
+  display: block;
 }
 
 .input-field::-webkit-file-upload-button {
