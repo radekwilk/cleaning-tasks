@@ -1,6 +1,7 @@
 $(document).ready(function () {
   const fileInput = document.getElementById("input_file");
   const tbody = document.getElementById("table-body");
+  const table = document.getElementById("cleaning-list");
   const daily = document.getElementById("daily");
   const weekly = document.getElementById("weekly");
   const periodic = document.getElementById("periodic");
@@ -19,6 +20,7 @@ $(document).ready(function () {
   const taskTypeColumn = 1; // this is hardcoded for now, will need to change it later
   let myData;
   let file;
+  let fileDownloaded = false;
 
   // We listen for any change in file input, and when it change we read the file and saving data in myData variable
   fileInput.addEventListener("change", (evt) => {
@@ -26,18 +28,26 @@ $(document).ready(function () {
     readXlsxFile(file).then((rows) => {
       tbody.innerHTML = "";
 
-      rows.forEach((row) => {
-        let tr = document.createElement("tr");
-        row.forEach((cell) => {
-          if (row[0] !== "Task ID") {
-            const td = document.createElement("td");
-            td.textContent = cell;
-            tr.appendChild(td);
-          }
-        });
-        tbody.appendChild(tr);
-      });
+      createTableData();
+      // rows.forEach((row) => {
+      //   let tr = document.createElement("tr");
+      //   row.forEach((cell) => {
+      //     if (row[0] !== "Task ID") {
+      //       const td = document.createElement("td");
+      //       td.textContent = cell;
+      //       tr.appendChild(td);
+      //     }
+      //   });
+      //   tbody.appendChild(tr);
+      // });
     });
+
+    if (file) {
+      table.style.display = "block";
+      fileDownloaded = true;
+    } else {
+      fileDownloaded = false;
+    }
   });
 
   // Select the rows for the daily cleaning
@@ -45,7 +55,11 @@ $(document).ready(function () {
     // console.log("This is from the daily click button");
     // console.log(file);
 
-    createTableData();
+    if (fileDownloaded) {
+      createTableData();
+    } else {
+      alert("Open the Excel file first");
+    }
   });
 
   // ******** CLEANING TASK DESCRIPTION LISTS******

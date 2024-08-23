@@ -61,6 +61,8 @@
   box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.48);
   background-color: #c2b3f2;
   border: none;
+  display: none;
+  transition: display 0.4s linear;
 }
 
 .table-head {
