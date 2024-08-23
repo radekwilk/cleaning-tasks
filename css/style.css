@@ -152,6 +152,10 @@
   color: white;
 }
 
+.modal-img {
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 2076px) {
   .table-cleaning {
     width: 70vw;

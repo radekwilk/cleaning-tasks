@@ -50,7 +50,7 @@
 
     
     <nav class="aside-nav">
-      <h3 class="h3 mb-3 h3-aside-heading">Schedule</h3>
+      <h3 class="h3 mb-3 h3-aside-heading">Descriptions</h3>
       <a class="nav-link active" aria-current="page" href="#" id="all-tasks">All tasks</a>
       <a class="nav-link " aria-current="page" href="#" id="daily">Daily</a>
       <a class="nav-link" href="#" id="weekly">Weekly</a>
@@ -60,6 +60,11 @@
       <a class="nav-link" href="#" id="guest_area_restrooms">Guest area - restrooms</a>
       <a class="nav-link" href="#" id="boh_building">BOH - building</a>
       <a class="nav-link" href="#" id="boh_equipment">BOH - equipment</a>
+
+      <h3 class="h3 mb-3 h3-aside-heading">Schedule</h3>
+      <a class="nav-link " aria-current="page" href="#" id="daily-schedule" data-bs-toggle="modal" data-bs-target="#modalSchedule">Daily</a>
+      <a class="nav-link" href="#" id="weekly-schedule" data-bs-toggle="modal" data-bs-target="#modalSchedule">Weekly</a>
+      <a class="nav-link" href="#" id="periodic-schdule"data-bs-toggle="modal" data-bs-target="#modalSchedule">Periodic</a>
 
     </nav>
 
@@ -163,7 +168,7 @@
       </table>
     </main>
 
-    <!-- MODAL -->
+    <!-- MODAL - TASK DESCRIPTION -->
     <div class="modal" tabindex="-1" id="exampleModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -188,6 +193,41 @@
               <li>This is step 3</li>
               <li>This is step 4</li>
             </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-modal"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END OF MODAL -->
+
+
+     <!-- MODAL - SCHDULE -->
+    <div class="modal" tabindex="-2" id="modalSchedule">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cleaning Schdule</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <figure class="modal-img-container">
+              <img src="img/info-1.png" class="img-fluid modal-img" />
+            </figure>
+            <h3>Info</h3>
+            <p>This functionality is not working at this moment of time...</p>
           </div>
           <div class="modal-footer">
             <button

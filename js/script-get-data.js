@@ -10,6 +10,10 @@ $(document).ready(function () {
   const bohBuilding = document.getElementById("boh_building");
   const bohEquipment = document.getElementById("boh_equipment");
 
+  const dailySchedule = document.getElementById("daily-schedule");
+  const weeklySchedule = document.getElementById("weekly-schedule");
+  const periodicSchedule = document.getElementById("periodic-schedule");
+
   const allTasks = document.getElementById("all-tasks");
   const frequencyColumn = 3; // this is hardcoded for now, will need to change it later
   const taskTypeColumn = 1; // this is hardcoded for now, will need to change it later
@@ -44,6 +48,7 @@ $(document).ready(function () {
     createTableData();
   });
 
+  // ******** CLEANING TASK DESCRIPTION LISTS******
   // Select the rows for the daily cleaning.
   daily.addEventListener("click", () => {
     createTableData("Daily", frequencyColumn);
@@ -83,6 +88,8 @@ $(document).ready(function () {
   bohEquipment.addEventListener("click", () => {
     createTableData("BOH - equipment", taskTypeColumn);
   });
+
+  // ******** CLEANING TASK SCHEDULES******
 
   // This is a function selecting all the rows with defined frequency parameter
   const createTableData = (parameter, colToLook) => {
