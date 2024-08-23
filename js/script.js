@@ -6,7 +6,7 @@ let imgName = "";
 cleaningImg.forEach((element) => {
   element.addEventListener("click", (e) => {
     imgName = `${element.children[0].id}.png`;
-
-    // console.log(imgName);
+    console.log("Image was clicked");
+    console.log(e);
   });
 });

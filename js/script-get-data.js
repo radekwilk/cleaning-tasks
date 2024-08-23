@@ -38,8 +38,8 @@ $(document).ready(function () {
 
   // Select the rows for the daily cleaning
   allTasks.addEventListener("click", () => {
-    console.log("This is from the daily click button");
-    console.log(file);
+    // console.log("This is from the daily click button");
+    // console.log(file);
 
     createTableData();
   });
@@ -89,12 +89,12 @@ $(document).ready(function () {
     readXlsxFile(file).then((rows) => {
       tbody.innerHTML = "";
 
-      console.log(rows);
+      // console.log(rows);
       for (let rowNum = 0; rowNum < rows.length; rowNum++) {
         if (parameter) {
           if (rows[rowNum][colToLook] === parameter) {
             if (rows[rowNum][0] !== "Task ID") {
-              console.log(rows[rowNum][0]);
+              // console.log(rows[rowNum][0]);
               let trow = createTableRow(
                 rows[rowNum].length,
                 rows[rowNum],
@@ -126,7 +126,7 @@ $(document).ready(function () {
 
     let imgCell = document.createElement("td");
     imgCell = addImg("cleaning", idNum);
-    console.log(`This is the image id: ${idNum}`);
+    // console.log(`This is the image id: ${idNum}`);
     tr.append(imgCell);
     return tr;
   };
@@ -144,9 +144,20 @@ $(document).ready(function () {
 
     td.classList.add("img-container", "cleaning-img");
     td.id = `${imgName}-${taskID}`;
-    td.setAttribute("data-bs-toggle", "modal");
+
+    setAttributes(td, {
+      "data-bs-toggle": "modal",
+      "data-bs-target": "#exampleModal",
+    });
     // td.setAttribute("data-bs-toggle", "#exampleModal");
 
     return td;
   };
+
+  // function to set attributes
+  function setAttributes(el, attrs) {
+    for (let key in attrs) {
+      el.setAttribute(key, attrs[key]);
+    }
+  }
 });

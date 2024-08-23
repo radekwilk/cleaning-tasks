@@ -39,8 +39,13 @@
 }
 
 .aside-nav .nav-link {
-  color: white;
+  color: #bfacfe;
   margin-bottom: 1.5rem;
+  transition: color 0.3s linear;
+}
+
+.aside-nav .nav-link:hover {
+  color: white;
 }
 
 .h3-aside-heading {
@@ -65,6 +70,17 @@
 
 .table-head-row th {
   vertical-align: middle;
+}
+
+#table-body tr:hover {
+  color: #bfacfe;
+  transition: background-color 0.4s linear;
+}
+
+#table-body tr:hover {
+  color: rgb(112, 90, 187);
+  background-color: #d9d0f6;
+  transition: all 0.4s linear;
 }
 
 /* Styling of input type="file"  */
